@@ -24,9 +24,8 @@ export default ({ className, children, title = 'This is the default title', load
         <Nav pullRight>
           <Navbar.Text>Made by me:</Navbar.Text>
           <Link href='/songs'><NavItem>Songs</NavItem></Link>
-          <Link href='/spotifyplaylister'><NavItem>Spotify Playlister</NavItem></Link>
+          <NavItem href="/spotifyplaylister">Spotify Playlister</NavItem>
         </Nav>
-
         
       </Navbar>
     </header>
