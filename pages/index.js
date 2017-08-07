@@ -3,7 +3,7 @@ import {Grid, Row, Col} from 'react-bootstrap'
 import MediaItem from '../components/MediaItem'
 
 export default () => (
-  <Layout>
+  <Layout title='Rob Huzzey - Web Developer - Kent'>
     <Grid>
       <Row>
         <Col xs={12} md={8}>

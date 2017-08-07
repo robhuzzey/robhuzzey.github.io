@@ -53,7 +53,7 @@ class Videos extends React.Component {
   render() {
     if(this.state.fetchNotSupported) return <p>Fetch is not supported</p>
     return (
-      <Layout loading={this.state.videos.length === 0}>
+      <Layout loading={this.state.videos.length === 0} title='Web development videos'>
         <Grid>
           <Row>
             {this.state.videos.map((video, i) => {

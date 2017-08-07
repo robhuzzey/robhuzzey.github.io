@@ -43,7 +43,7 @@ class Books extends React.Component {
   render() {
     if(this.state.fetchNotSupported) return <p>Fetch is not supported</p>
     return (
-      <Layout className='books' loading={this.props.books.length === 0}>
+      <Layout className='books' loading={this.props.books.length === 0} title='Books read by Rob Huzzey'>
         <Grid>
           {this.props.books.filter(book => {
             return book.volumeInfo.imageLinks

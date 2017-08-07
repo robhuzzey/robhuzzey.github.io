@@ -2,7 +2,7 @@ import Layout from '../components/Layout'
 import {Grid, Row, Col} from 'react-bootstrap'
 
 export default () => (
-  <Layout>
+  <Layout title='Songs created by Rob Huzzey'>
     <Grid>
       <Row>
         <Col xs={12} md={12}>

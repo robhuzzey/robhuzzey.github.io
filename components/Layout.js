@@ -8,6 +8,9 @@ export default ({ className, children, title = 'This is the default title', load
       <title>{ title }</title>
       <meta charSet='utf-8' />
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css" />
+      <link rel="stylesheet" href="/static/style.css" />
     </Head>
     <header>
       <Navbar>
@@ -15,17 +18,21 @@ export default ({ className, children, title = 'This is the default title', load
           <Navbar.Brand>
             <a href='/'>Rob Huzzey</a>
           </Navbar.Brand>
+          <Navbar.Toggle />
         </Navbar.Header>
-        <Nav>
-          <Link href='/videos'><NavItem>Videos</NavItem></Link>
-          <Link href='/books'><NavItem>Books</NavItem></Link>
-        </Nav>
 
-        <Nav pullRight>
-          <Navbar.Text>Made by me:</Navbar.Text>
-          <Link href='/songs'><NavItem>Songs</NavItem></Link>
-          <NavItem href="/spotifyplaylister">Spotify Playlister</NavItem>
-        </Nav>
+        <Navbar.Collapse>
+          <Nav>
+            <Link href='/videos'><NavItem>Videos</NavItem></Link>
+            <Link href='/books'><NavItem>Books</NavItem></Link>
+          </Nav>
+
+          <Nav pullRight>
+            <Navbar.Text>Made by me:</Navbar.Text>
+            <Link href='/songs'><NavItem>Songs</NavItem></Link>
+            <NavItem href="/spotifyplaylister">Spotify Playlister</NavItem>
+          </Nav>
+        </Navbar.Collapse>
         
       </Navbar>
     </header>
@@ -36,10 +43,6 @@ export default ({ className, children, title = 'This is the default title', load
       children
     )}
 
-    <footer>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css" />
-      <link rel="stylesheet" href="/static/style.css" />
-    </footer>
+    <footer></footer>
   </div>
 )
