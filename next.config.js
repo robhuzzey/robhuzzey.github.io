@@ -2,7 +2,10 @@
 module.exports = {
   exportPathMap: function () {
     return {
-      "/": { page: "/" }
+      "/": { page: "/" },
+      "/books": { page: "/books" },
+      "/songs": { page: "/songs" },
+      "/videos": { page: "/videos" }
     }
   },
 }
