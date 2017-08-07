@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import {Grid, Row, Col} from 'react-bootstrap'
 import MediaItem from '../components/MediaItem'
+import 'isomorphic-fetch'
 
 
 const BooksRow = props => (
@@ -25,34 +26,26 @@ class Books extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      books: [],
       fetchNotSupported: false
     }
 
   }
 
-  componentDidMount() {
-    if(!window.fetch) {
-      return this.setState({
-        fetchNotSupported: true
-      })
-    }
+  static async getInitialProps ({ req }) {
     const userId = '101891936560271534706'
-    fetch(`https://www.googleapis.com/books/v1/users/${userId}/bookshelves/4/volumes?country=GB&maxResults=40`)
-      .then((resp) => resp.json()) // Transform the data into json
-      .then(json => {
-        this.setState({
-          books: json.items
-        })
-      })
+    const res = await fetch(`https://www.googleapis.com/books/v1/users/${userId}/bookshelves/4/volumes?country=GB&maxResults=40`)
+    const json = await res.json()
+    return { 
+      books: json.items
+    }
   }
 
   render() {
     if(this.state.fetchNotSupported) return <p>Fetch is not supported</p>
     return (
-      <Layout className='books' loading={this.state.books.length === 0}>
+      <Layout className='books' loading={this.props.books.length === 0}>
         <Grid>
-          {this.state.books.filter(book => {
+          {this.props.books.filter(book => {
             return book.volumeInfo.imageLinks
           }).reduce((pairs, book, index) => { // split the books into pairs
             if(index % 2 === 0) {
