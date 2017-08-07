@@ -1,6 +1,0 @@
-
-          window.__NEXT_REGISTER_PAGE('/', function() {
-            var comp = module.exports=webpackJsonp([7],{430:function(e,l,t){e.exports=t(431)},431:function(e,l,t){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(l,"__esModule",{value:!0});var a=t(0),u=n(a),r=t(87),i=n(r),s=t(48),o=t(141),c=n(o);l.default=function(){return u.default.createElement(i.default,null,u.default.createElement(s.Grid,null,u.default.createElement(s.Row,null,u.default.createElement(s.Col,{xs:12,md:8},u.default.createElement(c.default,{className:"whoAmI",title:"Rob Huzzey",description:u.default.createElement("ul",null,u.default.createElement("li",null,"10 years of experience"),u.default.createElement("li",null,"Architecture & Programming")),img:"/static/rob-huzzey-web-developer.jpeg"})),u.default.createElement(s.Col,{className:"hidden-xs",xs:0,md:4},u.default.createElement("p",null,"Driven by a passion for learning, Rob is also heavily into personal fitness and is currently learning as much as possible in the Gym")))))}}},[430]);
-            return { page: comp.default }
-          })
-        

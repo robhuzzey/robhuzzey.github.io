@@ -1,0 +1,6 @@
+
+          window.__NEXT_REGISTER_PAGE('/', function() {
+            var comp = module.exports=webpackJsonp([7],{430:function(e,t,l){e.exports=l(431)},431:function(e,t,l){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var a=l(0),r=n(a),u=l(87),i=n(u),o=l(48),s=l(141),c=n(s);t.default=function(){return r.default.createElement(i.default,{title:"Rob Huzzey - Web Developer - Kent"},r.default.createElement(o.Grid,null,r.default.createElement(o.Row,null,r.default.createElement(o.Col,{xs:12,md:8},r.default.createElement(c.default,{className:"whoAmI",title:"Rob Huzzey",description:r.default.createElement("ul",null,r.default.createElement("li",null,"10 years of experience"),r.default.createElement("li",null,"Architecture & Programming")),img:"/static/rob-huzzey-web-developer.jpeg"})),r.default.createElement(o.Col,{className:"hidden-xs",xs:0,md:4},r.default.createElement("p",null,"Driven by a passion for learning, Rob is also heavily into personal fitness and is currently learning as much as possible in the Gym")))))}}},[430]);
+            return { page: comp.default }
+          })
+        
