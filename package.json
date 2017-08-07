@@ -16,7 +16,8 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
-    "deploy": "npm run export && ./scripts/deploy-to-gh.sh"
+    "moveghpagestuff": "cp CNAME .nojekyll ./out",
+    "deploy": "npm run export && npm run moveghpagestuff && ./scripts/deploy-to-gh.sh"
   },
   "author": "",
   "license": "ISC"

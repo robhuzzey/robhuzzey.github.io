@@ -1,2 +1,2 @@
 #!/bin/bash
-git subtree push --prefix out origin master
+git push origin `git subtree split --prefix out generator`:master --force
