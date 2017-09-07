@@ -57,6 +57,7 @@ class Videos extends React.Component {
         <Grid>
           <Row>
             {this.state.videos.map((video, i) => {
+              if(!video.snippet.thumbnails) return null
               return (
                 <Col xs={12} md={12} key={i}>
                   <MediaItem
